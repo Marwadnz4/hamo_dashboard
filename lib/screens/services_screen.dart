@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hamo_dashboard/core/colors.dart';
-import 'package:hamo_dashboard/core/helpers/spacing.dart';
+import 'package:hamo_dashboard/widgets/spacing.dart';
 import 'package:hamo_dashboard/core/styles.dart';
 import 'package:hamo_dashboard/screens/add_service_screen.dart';
 import 'package:hamo_dashboard/widgets/app_button_with_icon.dart';
 import 'package:hamo_dashboard/widgets/custom_card.dart';
 import 'package:hamo_dashboard/controllers/get_services_controller.dart';
-import 'package:hamo_dashboard/widgets/table_cells/services_table.dart';
+import 'package:hamo_dashboard/widgets/tabels/services_table.dart';
 
 class ServicesScreen extends StatelessWidget {
   const ServicesScreen({super.key});

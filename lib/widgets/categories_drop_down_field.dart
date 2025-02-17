@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hamo_dashboard/core/helpers/spacing.dart';
+import 'package:hamo_dashboard/widgets/spacing.dart';
 import 'package:hamo_dashboard/core/styles.dart';
 import 'package:hamo_dashboard/controllers/get_categories_controller.dart';
 import 'package:hamo_dashboard/models/category_response.dart';

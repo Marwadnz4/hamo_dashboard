@@ -31,7 +31,6 @@ class CategoriesTable extends StatelessWidget {
       rows: List.generate(
         getCategoriesController.categories.length,
         (index) => DataRow(
-          // selected: ,
           color: WidgetStatePropertyAll(
             index % 2 == 0 ? Colors.white : ColorsManager.background,
           ),

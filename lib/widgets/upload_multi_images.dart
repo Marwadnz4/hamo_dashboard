@@ -8,7 +8,7 @@ import 'package:hamo_dashboard/core/colors.dart';
 import 'package:hamo_dashboard/core/styles.dart';
 import 'package:hamo_dashboard/controllers/add_service_controller.dart';
 import 'package:image_picker_web/image_picker_web.dart';
-import 'package:hamo_dashboard/core/helpers/spacing.dart';
+import 'package:hamo_dashboard/widgets/spacing.dart';
 import 'package:hamo_dashboard/widgets/app_button_with_icon.dart';
 import 'package:hamo_dashboard/widgets/custom_divider.dart';
 

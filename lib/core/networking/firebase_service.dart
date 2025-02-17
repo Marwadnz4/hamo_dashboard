@@ -40,17 +40,17 @@ class FirebaseService {
   }
 
   Future<List<ServiceResponse>> getBookedServices() async {
-    List<ServiceResponse> actions = [];
+    List<ServiceResponse> services = [];
     await _firestore
         .collection(FirebaseConstants.services)
         .where(FirebaseConstants.bookers, isNotEqualTo: [])
         .get()
         .then((querySnapshot) {
           for (var docSnapshot in querySnapshot.docs) {
-            actions.add(ServiceResponse.fromJson(docSnapshot.data()));
+            services.add(ServiceResponse.fromJson(docSnapshot.data()));
           }
         });
-    return actions;
+    return services;
   }
 
     Future<void> updateBookingServiceStatus(UpdateServiceStatusRequestBody service) async {

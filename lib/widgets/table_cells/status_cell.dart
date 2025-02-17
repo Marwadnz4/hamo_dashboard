@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-DataCell productStateCell({
+DataCell serviceStatusCell({
   required Widget child,
 }) =>
     DataCell(

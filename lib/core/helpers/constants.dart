@@ -1,7 +1,7 @@
 bool isLoggedInUser = false;
 
 class SharedPrefKeys {
-  static const String uid = 'userToken';
+  static const String uid = 'uid';
 }
 
 class DashboardTablesHeaderRow {

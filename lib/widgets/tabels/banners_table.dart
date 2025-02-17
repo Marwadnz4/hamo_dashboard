@@ -4,7 +4,7 @@ import 'package:hamo_dashboard/core/colors.dart';
 import 'package:hamo_dashboard/widgets/table_cells/delete_cell.dart';
 import 'package:hamo_dashboard/widgets/table_cells/header_cell.dart';
 import 'package:hamo_dashboard/widgets/table_cells/image_cell.dart';
-import 'package:hamo_dashboard/controllers/get_banner_controller.dart';
+import 'package:hamo_dashboard/controllers/get_banners_controller.dart';
 
 class BannersTable extends StatelessWidget {
   final GetBannersController getBannersController;
@@ -29,7 +29,6 @@ class BannersTable extends StatelessWidget {
       rows: List.generate(
         getBannersController.banners.length,
         (index) => DataRow(
-          // selected: ,
           color: WidgetStatePropertyAll(
             index % 2 == 0 ? Colors.white : ColorsManager.background,
           ),

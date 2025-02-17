@@ -32,16 +32,17 @@ class UpcomingServicesTable extends StatelessWidget {
             text: DashboardTablesHeaderRow.bookedServicesHeaderRow[index],
           ),
         ),
-        rows: List.generate(
-          bookedServicesController.upcomingServices.length,
-          (index) {
-            ServiceResponse service = bookedServicesController.upcomingServices[index];
-            return DataRow(
+        rows: List.generate(bookedServicesController.upcomingServices.length, (
+          index,
+        ) {
+          ServiceResponse service =
+              bookedServicesController.upcomingServices[index];
+          return DataRow(
             color: WidgetStatePropertyAll(
               index % 2 == 0 ? Colors.white : ColorsManager.background,
             ),
             cells: [
-             normalCell(text: service.serviceName),
+              normalCell(text: service.serviceName),
               normalCell(text: service.servicePresenter),
               normalCell(text: service.servicePrice.toString()),
               imageCell(context: context, image: service.cover),
@@ -49,8 +50,7 @@ class UpcomingServicesTable extends StatelessWidget {
               normalCell(text: 'Upcoming'),
             ],
           );
-          },
-        ),
+        }),
       ),
     );
   }

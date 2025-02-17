@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hamo_dashboard/core/colors.dart';
-import 'package:hamo_dashboard/core/helpers/spacing.dart';
+import 'package:hamo_dashboard/widgets/spacing.dart';
 import 'package:hamo_dashboard/core/styles.dart';
 import 'package:hamo_dashboard/widgets/custom_card.dart';
 import 'package:hamo_dashboard/controllers/booked_services_controller.dart';

@@ -1,4 +1,3 @@
-
 class BannerRequestBody {
   final String cover;
   final String folderNameInFirebaseStorage;

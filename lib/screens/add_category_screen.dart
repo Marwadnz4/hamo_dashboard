@@ -74,7 +74,7 @@ class AddCategoryScreen extends StatelessWidget {
                             children: [
                               AppButton(
                                 buttonText: 'Cancel',
-                                width: 100,
+                                width: 150,
                                 hasBorder: true,
                                 onPressed: () {
                                   Get.back();
@@ -83,7 +83,7 @@ class AddCategoryScreen extends StatelessWidget {
                               horizontalSpace(20),
                               AppButton(
                                 buttonText: 'Add',
-                                width: 200,
+                                width: 150,
                                 onPressed: () {
                                   if (addCategoryController
                                       .formKey

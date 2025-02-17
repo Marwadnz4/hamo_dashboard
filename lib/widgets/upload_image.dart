@@ -46,7 +46,7 @@ class _UploadImageState extends State<UploadImage> {
               widget.imagePath(selectedImageInBytes!);
             },
             child: SizedBox(
-              height: 300,
+              height: 250,
               child: DottedBorder(
                 color: ColorsManager.navSelector,
                 strokeCap: StrokeCap.round,

@@ -30,7 +30,7 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
       children: [
         Align(
           alignment: AlignmentDirectional.topStart,
-          child: Text('Product Images', style: TextStyles.font20LabelRegular),
+          child: Text('Service Images', style: TextStyles.font20LabelRegular),
         ),
         verticalSpace(13),
         addServiceController.images.isEmpty
@@ -38,7 +38,6 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
               onTap: () async {
                 List<Uint8List>? bytesFromPicker =
                     await ImagePickerWeb.getMultiImagesAsBytes();
-
                 setState(() {
                   imageAvailable = true;
                 });
@@ -47,7 +46,7 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
                 }
               },
               child: SizedBox(
-                height: 394,
+                height: 250,
                 child: const CustomUploadMultiImagesBtn(),
               ),
             )
@@ -64,7 +63,7 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
                         width: 2,
                       ),
                     ),
-                    height: 394,
+                    height: 250,
                     child: ListView.separated(
                       padding: EdgeInsets.all(4),
                       itemBuilder:
@@ -91,7 +90,6 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
                       onTap: () async {
                         List<Uint8List>? bytesFromPicker =
                             await ImagePickerWeb.getMultiImagesAsBytes();
-
                         setState(() {});
                         if (bytesFromPicker != null) {
                           addServiceController.images.addAll(bytesFromPicker);
@@ -117,7 +115,7 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
         if (addServiceController.images.isEmpty) verticalSpace(20),
         if (addServiceController.images.isEmpty)
           Text(
-            'You should upload product images',
+            'You should upload Service images',
             style: TextStyles.font20RedRegular,
           ),
       ],

@@ -45,6 +45,7 @@ class AddServiceScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         Row(
+                          spacing: 20,
                           children: [
                             Expanded(
                               child: AppTextFormField(
@@ -72,6 +73,7 @@ class AddServiceScreen extends StatelessWidget {
                         ),
                         verticalSpace(25),
                         Row(
+                          spacing: 20,
                           children: [
                             Expanded(
                               child: AppTextFormField(
@@ -107,21 +109,19 @@ class AddServiceScreen extends StatelessWidget {
                           ],
                         ),
                         verticalSpace(25),
-                        Expanded(
-                          child: AppTextFormField(
-                            controller:
-                                addServiceController.descriptionController,
-                            hintText: "Insert Service Name",
-                            labelText: "Service Name",
-                            keyboardType: TextInputType.name,
-                            maxLines: 5,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter a valid Service Name';
-                              }
-                              return null;
-                            },
-                          ),
+                        AppTextFormField(
+                          controller:
+                              addServiceController.descriptionController,
+                          hintText: "Insert Service Description",
+                          labelText: "Service Description",
+                          keyboardType: TextInputType.name,
+                          maxLines: 5,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter a valid Service Description';
+                            }
+                            return null;
+                          },
                         ),
                         verticalSpace(25),
                         UploadImage(
@@ -145,7 +145,7 @@ class AddServiceScreen extends StatelessWidget {
                             children: [
                               AppButton(
                                 buttonText: 'Cancel',
-                                width: 200,
+                                width: 150,
                                 hasBorder: true,
                                 onPressed: () {
                                   Get.back();
@@ -154,7 +154,7 @@ class AddServiceScreen extends StatelessWidget {
                               horizontalSpace(20),
                               AppButton(
                                 buttonText: 'Add',
-                                width: 200,
+                                width: 150,
                                 onPressed: () {
                                   if (addServiceController.formKey.currentState!
                                       .validate()) {

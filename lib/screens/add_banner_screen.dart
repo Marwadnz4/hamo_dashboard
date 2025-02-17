@@ -53,7 +53,7 @@ class AddBannerScreen extends StatelessWidget {
                             children: [
                               AppButton(
                                 buttonText: 'Cancel',
-                                width: 200,
+                                width: 150,
                                 hasBorder: true,
                                 onPressed: () {
                                   Get.back();
@@ -62,7 +62,7 @@ class AddBannerScreen extends StatelessWidget {
                               horizontalSpace(20),
                               AppButton(
                                 buttonText: 'Add',
-                                width: 200,
+                                width: 150,
                                 onPressed: () {
                                   if (addBannerController.formKey.currentState!
                                       .validate()) {

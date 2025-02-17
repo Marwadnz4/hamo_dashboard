@@ -24,6 +24,16 @@ class CategoriesScreen extends StatelessWidget {
           Row(
             children: [
               Text('Categories', style: TextStyles.font26PrimaryMedium),
+              IconButton(
+                onPressed: () {
+                  getCategoriesController.getCategories();
+                },
+                icon: Icon(
+                  Icons.refresh,
+                  color: ColorsManager.primary,
+                  size: 25,
+                ),
+              ),
               const Spacer(),
               AppButtonWithIcon(
                 buttonText: 'Add Category',

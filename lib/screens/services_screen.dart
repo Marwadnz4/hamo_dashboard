@@ -25,6 +25,16 @@ class ServicesScreen extends StatelessWidget {
           Row(
             children: [
               Text('Services', style: TextStyles.font26PrimaryMedium),
+              IconButton(
+                onPressed: () {
+                  getServicesController.getServices();
+                },
+                icon: Icon(
+                  Icons.refresh,
+                  color: ColorsManager.primary,
+                  size: 25,
+                ),
+              ),
               const Spacer(),
               AppButtonWithIcon(
                 buttonText: 'Add Service',

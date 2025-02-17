@@ -42,7 +42,22 @@ class _BookedServicesScreenState extends State<BookedServicesScreen>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Booked Services', style: TextStyles.font26PrimaryMedium),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Booked Services', style: TextStyles.font26PrimaryMedium),
+              IconButton(
+                onPressed: () {
+                  bookedServicesController.getBookedServices();
+                },
+                icon: Icon(
+                  Icons.refresh,
+                  color: ColorsManager.primary,
+                  size: 25,
+                ),
+              ),
+            ],
+          ),
           TabBar(
             controller: tabController,
             labelColor: ColorsManager.primary,

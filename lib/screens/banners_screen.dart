@@ -25,6 +25,16 @@ class BannersScreen extends StatelessWidget {
           Row(
             children: [
               Text('Banners', style: TextStyles.font26PrimaryMedium),
+              IconButton(
+                onPressed: () {
+                  getBannersController.getBanners();
+                },
+                icon: Icon(
+                  Icons.refresh,
+                  color: ColorsManager.primary,
+                  size: 25,
+                ),
+              ),
               const Spacer(),
               AppButtonWithIcon(
                 buttonText: 'Add Banner',

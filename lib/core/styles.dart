@@ -44,13 +44,19 @@ class TextStyles {
     fontWeight: FontWeight.bold,
   );
 
-  static TextStyle font20WhiteMedium = TextStyle(
+  static TextStyle font18PrimaryMedium = TextStyle(
+    color: ColorsManager.primary,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle font14WhiteMedium = TextStyle(
     color: Colors.white,
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle font18PrimaryMedium = TextStyle(
+  static TextStyle font16PrimaryMedium = TextStyle(
     color: ColorsManager.primary,
     fontSize: 14,
     fontWeight: FontWeight.w500,

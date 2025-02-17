@@ -61,19 +61,23 @@ class AddServiceScreen extends StatelessWidget {
                                 },
                               ),
                             ),
-                            Expanded(child: CategoriesDropdownField(
-selectedCategory: (category) {
-  addServiceController.category = category;
-},
-                            ),),
+                            Expanded(
+                              child: CategoriesDropdownField(
+                                selectedCategory: (category) {
+                                  addServiceController.category = category;
+                                },
+                              ),
+                            ),
                           ],
                         ),
                         verticalSpace(25),
-                        Row(children: [
-                          Expanded(
+                        Row(
+                          children: [
+                            Expanded(
                               child: AppTextFormField(
                                 controller:
-                                    addServiceController.servicePresenterController,
+                                    addServiceController
+                                        .servicePresenterController,
                                 hintText: "Insert Service Name",
                                 labelText: "Service Name",
                                 keyboardType: TextInputType.name,
@@ -100,24 +104,26 @@ selectedCategory: (category) {
                                 },
                               ),
                             ),
-                        ],),
+                          ],
+                        ),
                         verticalSpace(25),
                         Expanded(
-                              child: AppTextFormField(
-                                controller:
-                                    addServiceController.descriptionController,
-                                hintText: "Insert Service Name",
-                                labelText: "Service Name",
-                                keyboardType: TextInputType.name,
-                                maxLines: 5,
-                                validator: (value) {
-                                  if (value == null || value.isEmpty) {
-                                    return 'Please enter a valid Service Name';
-                                  }
-                                  return null;
-                                },
-                              ),
-                            ),verticalSpace(25),
+                          child: AppTextFormField(
+                            controller:
+                                addServiceController.descriptionController,
+                            hintText: "Insert Service Name",
+                            labelText: "Service Name",
+                            keyboardType: TextInputType.name,
+                            maxLines: 5,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a valid Service Name';
+                              }
+                              return null;
+                            },
+                          ),
+                        ),
+                        verticalSpace(25),
                         UploadImage(
                           labelText: 'Service Cover Image',
                           imagePath: (bytes) {
@@ -125,8 +131,7 @@ selectedCategory: (category) {
                           },
                         ),
                         verticalSpace(25),
-                        const UploadMultiImagesBtn(
-          ),
+                        const UploadMultiImagesBtn(),
                       ],
                     ),
                   ),
@@ -151,9 +156,7 @@ selectedCategory: (category) {
                                 buttonText: 'Add',
                                 width: 200,
                                 onPressed: () {
-                                  if (addServiceController
-                                      .formKey
-                                      .currentState!
+                                  if (addServiceController.formKey.currentState!
                                       .validate()) {
                                     addServiceController.uploadCover();
                                   }
@@ -168,7 +171,7 @@ selectedCategory: (category) {
                 if (addServiceController.isAdded.value)
                   Text(
                     'The Service added Successfully',
-                    style: TextStyles.font18PrimaryMedium,
+                    style: TextStyles.font16PrimaryMedium,
                   ),
               ],
             ),

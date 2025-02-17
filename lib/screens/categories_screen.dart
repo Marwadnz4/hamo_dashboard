@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hamo_dashboard/core/colors.dart';
 import 'package:hamo_dashboard/core/helpers/spacing.dart';
-import 'package:hamo_dashboard/core/routing/routes.dart';
 import 'package:hamo_dashboard/core/styles.dart';
+import 'package:hamo_dashboard/screens/add_category_screen.dart';
 import 'package:hamo_dashboard/widgets/app_button_with_icon.dart';
 import 'package:hamo_dashboard/widgets/custom_card.dart';
 import 'package:hamo_dashboard/controllers/get_categories_controller.dart';
@@ -30,7 +30,7 @@ class CategoriesScreen extends StatelessWidget {
                 icon: Icons.add_circle_outline_rounded,
                 width: 200,
                 onPressed: () {
-                  Get.toNamed(AppRouter.addCategoryScreen);
+                  Get.to(() => AddCategoryScreen());
                 },
               ),
             ],

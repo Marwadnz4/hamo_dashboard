@@ -21,24 +21,22 @@ class AppButton extends StatelessWidget {
     return ElevatedButton(
       style: ButtonStyle(
         shape: MaterialStatePropertyAll(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
-        side: MaterialStatePropertyAll(hasBorder
-            ? const BorderSide(width: 1.5, color: ColorsManager.primary)
-            : null),
+        side: MaterialStatePropertyAll(
+          hasBorder
+              ? const BorderSide(width: 1.5, color: ColorsManager.primary)
+              : null,
+        ),
         elevation: const MaterialStatePropertyAll(2),
         shadowColor: MaterialStatePropertyAll(
-            hasBorder ? Colors.grey : ColorsManager.primary),
+          hasBorder ? Colors.grey : ColorsManager.primary,
+        ),
         backgroundColor: MaterialStatePropertyAll(
           hasBorder ? Colors.white : ColorsManager.primary,
         ),
         padding: MaterialStatePropertyAll<EdgeInsets>(
-          EdgeInsets.symmetric(
-            horizontal: 16,
-            vertical: 12,
-          ),
+          EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         ),
         fixedSize: MaterialStatePropertyAll(
           Size(width ?? double.maxFinite, 56),
@@ -47,9 +45,10 @@ class AppButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         buttonText,
-        style: hasBorder
-            ? TextStyles.font18PrimaryMedium
-            : TextStyles.font18WhiteMedium,
+        style:
+            hasBorder
+                ? TextStyles.font16PrimaryMedium
+                : TextStyles.font18WhiteMedium,
       ),
     );
   }

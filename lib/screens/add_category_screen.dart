@@ -22,12 +22,11 @@ class AddCategoryScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 200),
+          padding: EdgeInsets.symmetric(horizontal: 200, vertical: 40),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                verticalSpace(40),
                 Row(
                   children: [
                     const CustomBackButton(),
@@ -75,7 +74,7 @@ class AddCategoryScreen extends StatelessWidget {
                             children: [
                               AppButton(
                                 buttonText: 'Cancel',
-                                width: 200,
+                                width: 100,
                                 hasBorder: true,
                                 onPressed: () {
                                   Get.back();
@@ -103,7 +102,7 @@ class AddCategoryScreen extends StatelessWidget {
                 if (addCategoryController.isAdded.value)
                   Text(
                     'The Category added Successfully',
-                    style: TextStyles.font18PrimaryMedium,
+                    style: TextStyles.font16PrimaryMedium,
                   ),
               ],
             ),

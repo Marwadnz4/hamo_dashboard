@@ -56,7 +56,7 @@ class AppButtonWithIcon extends StatelessWidget {
         buttonText,
         style:
             hasBorder
-                ? TextStyles.font18PrimaryMedium
+                ? TextStyles.font16PrimaryMedium
                 : TextStyles.font18WhiteMedium,
       ),
     );

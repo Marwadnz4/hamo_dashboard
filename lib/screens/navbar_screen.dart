@@ -87,6 +87,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                                 children: [
                                   Icon(
                                     tabs[index].icon,
+                                    size: indexSelected == index ? 30 : 20,
                                     color:
                                         indexSelected == index
                                             ? ColorsManager.primary
@@ -97,7 +98,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                                     style:
                                         indexSelected == index
                                             ? TextStyles.font18PrimaryMedium
-                                            : TextStyles.font20WhiteMedium,
+                                            : TextStyles.font14WhiteMedium,
                                   ),
                                 ],
                               ),
@@ -109,7 +110,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                   verticalSpace(20),
                   ListTile(
                     leading: const Icon(Icons.logout, color: Colors.white),
-                    title: Text("Logout", style: TextStyles.font20WhiteMedium),
+                    title: Text("Logout", style: TextStyles.font18WhiteMedium),
                     onTap: () => Get.to(AppRouter.loginScreen),
                   ),
                   verticalSpace(20),

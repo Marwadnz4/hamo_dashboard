@@ -23,7 +23,7 @@ class UploadImage extends StatefulWidget {
 
 class _UploadImageState extends State<UploadImage> {
   bool imageAvailable = false;
-  late Uint8List selectedImageInBytes;
+  Uint8List? selectedImageInBytes;
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +33,7 @@ class _UploadImageState extends State<UploadImage> {
         children: [
           Align(
             alignment: AlignmentDirectional.topStart,
-            child: Text(
-              widget.labelText,
-              style: TextStyles.font20LabelRegular,
-            ),
+            child: Text(widget.labelText, style: TextStyles.font20LabelRegular),
           ),
           verticalSpace(13),
           InkWell(
@@ -46,50 +43,45 @@ class _UploadImageState extends State<UploadImage> {
                 selectedImageInBytes = image!;
                 imageAvailable = true;
               });
-              widget.imagePath(selectedImageInBytes);
+              widget.imagePath(selectedImageInBytes!);
             },
             child: SizedBox(
-              height: 394,
+              height: 300,
               child: DottedBorder(
                 color: ColorsManager.navSelector,
                 strokeCap: StrokeCap.round,
                 strokeWidth: 1,
                 padding: EdgeInsets.all(10),
-                child: imageAvailable
-                    ? Image.memory(
-                        selectedImageInBytes,
-                        fit: BoxFit.fill,
-                      )
-                    : Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            CircleAvatar(
-                              radius: 40,
-                              backgroundColor: ColorsManager.primary,
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                                size: 50,
+                child:
+                    imageAvailable
+                        ? Image.memory(selectedImageInBytes!, fit: BoxFit.fill)
+                        : Center(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundColor: ColorsManager.primary,
+                                child: Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                  size: 50,
+                                ),
                               ),
-                            ),
-                            horizontalSpace(20),
-                            Text(
-                              'Upload Image',
-                              style: TextStyles.font26PrimaryMedium,
-                            ),
-                          ],
+                              horizontalSpace(20),
+                              Text(
+                                'Upload Image',
+                                style: TextStyles.font26PrimaryMedium,
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
               ),
             ),
           ),
-        if (!imageAvailable) verticalSpace(20),
-        if (!imageAvailable)
-            Text(
-              'You should upload cover',
-              style: TextStyles.font20RedRegular,
-            ),
+          if (!imageAvailable) verticalSpace(20),
+          if (!imageAvailable)
+            Text('You should upload cover', style: TextStyles.font20RedRegular),
         ],
       ),
     );

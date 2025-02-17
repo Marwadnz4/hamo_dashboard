@@ -38,11 +38,11 @@ class AddBannerScreen extends StatelessWidget {
                 verticalSpace(40),
                 CustomCard(
                   child: UploadImage(
-                        labelText: 'Category Cover Image',
-                        imagePath: (bytes) {
-                          addBannerController.banner = bytes;
-                        },
-                      ),
+                    labelText: 'Banner Cover Image',
+                    imagePath: (bytes) {
+                      addBannerController.banner = bytes;
+                    },
+                  ),
                 ),
                 verticalSpace(28),
                 Obx(
@@ -64,9 +64,7 @@ class AddBannerScreen extends StatelessWidget {
                                 buttonText: 'Add',
                                 width: 200,
                                 onPressed: () {
-                                  if (addBannerController
-                                      .formKey
-                                      .currentState!
+                                  if (addBannerController.formKey.currentState!
                                       .validate()) {
                                     addBannerController.uploadCover();
                                   }
@@ -81,7 +79,7 @@ class AddBannerScreen extends StatelessWidget {
                 if (addBannerController.isAdded.value)
                   Text(
                     'The Category added Successfully',
-                    style: TextStyles.font18PrimaryMedium,
+                    style: TextStyles.font16PrimaryMedium,
                   ),
               ],
             ),

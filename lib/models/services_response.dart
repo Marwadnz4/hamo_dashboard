@@ -1,6 +1,6 @@
+import 'package:hamo_dashboard/models/address_model.dart';
 import 'package:hamo_dashboard/models/category_response.dart';
 import 'package:hamo_dashboard/models/booker_response.dart';
-import 'package:latlong2/latlong.dart';
 
 class ServiceResponse {
   final String serviceDocId;
@@ -10,7 +10,7 @@ class ServiceResponse {
   final String description;
   final String servicePresenter;
   final int servicePrice;
-  final LatLng location;
+  final AddressModel location;
   final CategoryResponse category;
   final List<ServiceRate> rating;
   final List<BookerResponse> bookers;
@@ -54,7 +54,9 @@ class ServiceResponse {
     category: CategoryResponse.fromJson(
       json['category'] as Map<String, dynamic>,
     ),
-    location: json['location'] as LatLng,
+    location: AddressModel.fromJson(
+      json['location'] as Map<String, dynamic>,
+    ),
   );
 }
 

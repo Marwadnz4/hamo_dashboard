@@ -1,10 +1,10 @@
 import 'package:enum_to_string/enum_to_string.dart';
-import 'package:latlong2/latlong.dart';
+import 'package:hamo_dashboard/models/address_model.dart';
 
 class BookerResponse {
   final String userUid;
   final String userName;
-  final LatLng location;
+  final AddressModel location;
   final BookerStatus serviceStatus;
   final DateTime beingDate;
   final DateTime endDate;
@@ -22,7 +22,7 @@ class BookerResponse {
       BookerResponse(
         userUid: json['userUid'] as String,
         userName: json['userName'] as String,
-        location: json['location'] as LatLng,
+        location: AddressModel.fromJson(json['location']),
         serviceStatus:
             EnumToString.fromString(
               BookerStatus.values,

@@ -19,4 +19,11 @@ class CategoryResponse {
         folderNameInFirebaseStorage:
             json['folderNameInFirebaseStorage'] as String,
       );
+
+  Map<String, dynamic> toJson() => {
+    'categoryDocId': categoryDocId,
+    'categoryName': categoryName,
+    'cover': cover,
+    'folderNameInFirebaseStorage': folderNameInFirebaseStorage,
+  };
 }

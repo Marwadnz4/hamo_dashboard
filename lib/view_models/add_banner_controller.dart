@@ -1,6 +1,5 @@
 import 'dart:typed_data';
 
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hamo_dashboard/models/storage_image_model.dart';
 import 'package:hamo_dashboard/firebase/firebase_constants.dart';
@@ -9,8 +8,6 @@ import 'package:hamo_dashboard/models/banner_request_body.dart';
 import 'package:firebase_core/firebase_core.dart' as firebase_core;
 
 class AddBannerController extends GetxController {
-  TextEditingController categoryNameController = TextEditingController();
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
   FirebaseService _firebaseService = FirebaseService();
   Uint8List? banner;
   String? subFolderName;

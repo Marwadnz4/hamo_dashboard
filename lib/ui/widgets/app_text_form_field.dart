@@ -4,7 +4,6 @@ import 'package:hamo_dashboard/ui/widgets/spacing.dart';
 import 'package:hamo_dashboard/core/styles.dart';
 
 class AppTextFormField extends StatelessWidget {
-  final bool? isRequired;
   final String hintText;
   final String labelText;
   final bool? isObscureText;
@@ -26,7 +25,6 @@ class AppTextFormField extends StatelessWidget {
     this.controller,
     this.validator,
     this.keyboardType,
-    this.isRequired,
     required this.labelText,
     this.prefixIcon,
     this.onChanged,
@@ -39,14 +37,9 @@ class AppTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            Text(labelText, style: TextStyles.font16LabelRegular),
-            if (isRequired != null)
-              const Text('*', style: TextStyle(color: Colors.red)),
-          ],
-        ),
+        Text(labelText, style: TextStyles.font16LabelRegular),
         verticalSpace(13),
         TextFormField(
           textAlignVertical: TextAlignVertical.center,

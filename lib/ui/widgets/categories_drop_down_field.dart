@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hamo_dashboard/ui/widgets/spacing.dart';
 import 'package:hamo_dashboard/core/styles.dart';
+import 'package:hamo_dashboard/view_models/add_service_controller.dart';
 import 'package:hamo_dashboard/view_models/get_categories_controller.dart';
 import 'package:hamo_dashboard/models/category_response.dart';
 
@@ -20,6 +21,14 @@ class _CategoriesDropdownFieldState extends State<CategoriesDropdownField> {
   final GetCategoriesController getCategoriesController = Get.put(
     GetCategoriesController(),
   );
+  final AddServiceController addServiceController = Get.find();
+
+  @override
+  void initState() {
+    super.initState();
+    addServiceController.category = getCategoriesController.categories.first;
+  }
+
   @override
   Widget build(BuildContext context) {
     categoryResponse = getCategoriesController.categories.first;

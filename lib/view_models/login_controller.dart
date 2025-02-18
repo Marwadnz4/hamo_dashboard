@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hamo_dashboard/core/constants.dart';
 import 'package:hamo_dashboard/core/shared_pref_helper.dart';
 import 'package:hamo_dashboard/firebase/firebase_service.dart';
 import 'package:hamo_dashboard/route/app_routes.dart';
@@ -11,11 +10,11 @@ import 'package:hamo_dashboard/models/login_request_body.dart';
 
 class LoginController extends GetxController {
   final FirebaseService _firebaseService = FirebaseService();
-  TextEditingController phoneController = TextEditingController();
+
   TextEditingController passwordController = TextEditingController();
   TextEditingController emailController = TextEditingController();
-
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
   RxBool isLoading = false.obs;
 
   void login() async {
@@ -67,6 +66,6 @@ class LoginController extends GetxController {
   }
 }
 
-Future<void> saveUserToken(String token) async {
-  await SharedPrefHelper.setSecuredString(SharedPrefKeys.uid, token);
+Future<void> saveUserToken(String uid) async {
+  await SharedPrefHelper.setSecuredString('uid', uid);
 }

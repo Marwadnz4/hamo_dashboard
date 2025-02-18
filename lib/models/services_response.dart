@@ -37,7 +37,7 @@ class ServiceResponse {
     servicePresenter: json['servicePresenter'] as String,
     cover: json['cover'] as String,
     description: json['description'] as String,
-    servicePrice: (json['startingPrice'] as num).toInt(),
+    servicePrice: (json['servicePrice'] as num).toInt(),
     images: (json['images'] as List<dynamic>).map((e) => e as String).toList(),
     rating:
         (json['rating'] as List<dynamic>).isNotEmpty

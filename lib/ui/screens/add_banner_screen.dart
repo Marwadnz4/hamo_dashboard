@@ -64,10 +64,7 @@ class AddBannerScreen extends StatelessWidget {
                                 buttonText: 'Add',
                                 width: 150,
                                 onPressed: () {
-                                  if (addBannerController.formKey.currentState!
-                                      .validate()) {
-                                    addBannerController.uploadCover();
-                                  }
+                                  addBannerController.uploadCover();
                                 },
                               ),
                             ],
@@ -78,7 +75,7 @@ class AddBannerScreen extends StatelessWidget {
                 ),
                 if (addBannerController.isAdded.value)
                   Text(
-                    'The Category added Successfully',
+                    'The Banner added Successfully',
                     style: TextStyles.font14PrimaryMedium,
                   ),
               ],

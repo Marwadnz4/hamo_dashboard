@@ -67,30 +67,4 @@ class TextFormFieldBorders {
     borderSide: BorderSide(color: Colors.red, width: 1),
     borderRadius: BorderRadius.circular(8),
   );
-
-  static OutlineInputBorder focusedBorderForPhoneField = OutlineInputBorder(
-    borderSide: BorderSide(color: ColorsManager.stroke, width: 1),
-    borderRadius: BorderRadius.only(
-      topRight: Radius.circular(8),
-      bottomRight: Radius.circular(8),
-    ),
-  );
-
-  static OutlineInputBorder errorBorderForPhoneField = OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.red, width: 1),
-    borderRadius: BorderRadius.only(
-      topRight: Radius.circular(8),
-      bottomRight: Radius.circular(8),
-    ),
-  );
-
-  static OutlineInputBorder stateBorderInCell = OutlineInputBorder(
-    borderSide: const BorderSide(color: Colors.transparent, width: 0),
-    borderRadius: BorderRadius.circular(40),
-  );
-
-  static OutlineInputBorder stateBorderInForm = OutlineInputBorder(
-    borderSide: const BorderSide(color: Colors.transparent, width: 0),
-    borderRadius: BorderRadius.circular(8),
-  );
 }

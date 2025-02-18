@@ -98,12 +98,7 @@ class AddServiceController extends GetxController {
           ),
           description: descriptionController.text,
           images: imagesUrls,
-          category: CategoryResponse(
-            categoryDocId: 'categoryDocId',
-            categoryName: 'categoryName',
-            cover: 'cover',
-            folderNameInFirebaseStorage: 'folderNameInFirebaseStorage,',
-          ),
+          category: category!,
           rating: rating,
           bookers: bookers,
           cover: coverUrl!,

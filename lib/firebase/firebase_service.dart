@@ -114,20 +114,6 @@ class FirebaseService {
     return await reference.getDownloadURL();
   }
 
-  Future<String> uploadImagesToFirestorage(StorageImageModel image) async {
-    String uniqueName = DateTime.now().microsecondsSinceEpoch.toString();
-
-    Reference reference = _storageRef
-        .child(image.folderName)
-        .child(image.subFolderName)
-        .child('${image.imageName}$uniqueName');
-    await reference.putData(
-      image.file,
-      SettableMetadata(contentType: 'image/jpeg'),
-    );
-    return await reference.getDownloadURL();
-  }
-
   Future<void> addCategory(CategoryRequestBody category) async {
     final categories = _firestore.collection(FirebaseConstants.categories);
 
@@ -144,7 +130,6 @@ class FirebaseService {
 
   Future<List<ServiceResponse>> getServices() async {
     List<ServiceResponse> services = [];
-
     await _firestore.collection(FirebaseConstants.services).get().then((
       querySnapshot,
     ) {

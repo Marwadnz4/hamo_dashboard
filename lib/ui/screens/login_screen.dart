@@ -25,7 +25,6 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 100),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset('assets/images/white_logo.png', height: 200),
             verticalSpace(20),

@@ -42,17 +42,9 @@ class AppTextFormField extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text(
-              labelText,
-              style: TextStyles.font20LabelRegular,
-            ),
+            Text(labelText, style: TextStyles.font16LabelRegular),
             if (isRequired != null)
-              const Text(
-                '*',
-                style: TextStyle(
-                  color: Colors.red,
-                ),
-              ),
+              const Text('*', style: TextStyle(color: Colors.red)),
           ],
         ),
         verticalSpace(13),
@@ -66,21 +58,20 @@ class AppTextFormField extends StatelessWidget {
           onChanged: onChanged,
           onTap: onTap,
           decoration: InputDecoration(
-            contentPadding:
-                EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+            contentPadding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
             focusedBorder: TextFormFieldBorders.focusedBorderForAppField,
             enabledBorder: TextFormFieldBorders.focusedBorderForAppField,
             errorBorder: TextFormFieldBorders.errorBorderForAppField,
             focusedErrorBorder: TextFormFieldBorders.errorBorderForAppField,
             hintText: hintText,
-            hintStyle: TextStyles.font20LabelRegular,
+            hintStyle: TextStyles.font16LabelRegular,
             suffixIcon: suffixIcon,
             prefixIcon: prefixIcon,
             prefixIconConstraints: BoxConstraints.tight(Size(80, 80)),
-            prefixStyle: TextStyles.font20LabelRegular,
+            prefixStyle: TextStyles.font16LabelRegular,
           ),
           obscureText: isObscureText ?? false,
-          style: TextStyles.font20LabelRegular,
+          style: TextStyles.font16LabelRegular,
           validator: validator,
         ),
       ],

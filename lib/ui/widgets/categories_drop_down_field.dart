@@ -26,7 +26,7 @@ class _CategoriesDropdownFieldState extends State<CategoriesDropdownField> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Select Category', style: TextStyles.font20LabelRegular),
+        Text('Select Category', style: TextStyles.font16LabelRegular),
         verticalSpace(13),
         DropdownButtonFormField<CategoryResponse>(
           validator: (value) {
@@ -50,7 +50,7 @@ class _CategoriesDropdownFieldState extends State<CategoriesDropdownField> {
                       value: item,
                       child: Text(
                         item.categoryName,
-                        style: TextStyles.font20LabelRegular,
+                        style: TextStyles.font16LabelRegular,
                       ),
                     ),
                   )

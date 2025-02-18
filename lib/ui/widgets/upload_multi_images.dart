@@ -30,7 +30,7 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
       children: [
         Align(
           alignment: AlignmentDirectional.topStart,
-          child: Text('Service Images', style: TextStyles.font20LabelRegular),
+          child: Text('Service Images', style: TextStyles.font16LabelRegular),
         ),
         verticalSpace(13),
         addServiceController.images.isEmpty
@@ -83,7 +83,7 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
                   children: [
                     Text(
                       'Uploaded Images number : ${addServiceController.images.length}',
-                      style: TextStyles.font22PrimaryMedium,
+                      style: TextStyles.font18PrimaryMedium,
                     ),
                     verticalSpace(50),
                     InkWell(
@@ -116,7 +116,7 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
         if (addServiceController.images.isEmpty)
           Text(
             'You should upload Service images',
-            style: TextStyles.font20RedRegular,
+            style: TextStyles.font16RedRegular,
           ),
       ],
     );
@@ -143,7 +143,7 @@ class CustomUploadMultiImagesBtn extends StatelessWidget {
               child: Icon(Icons.add, color: Colors.white, size: 45),
             ),
             horizontalSpace(20),
-            Text('Upload Images', style: TextStyles.font26PrimaryMedium),
+            Text('Upload Images', style: TextStyles.font18PrimaryMedium),
           ],
         ),
       ),

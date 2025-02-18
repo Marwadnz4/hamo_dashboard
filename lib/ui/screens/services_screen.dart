@@ -24,7 +24,7 @@ class ServicesScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('Services', style: TextStyles.font26PrimaryMedium),
+              Text('Services', style: TextStyles.font18PrimaryMedium),
               IconButton(
                 onPressed: () {
                   getServicesController.getServices();

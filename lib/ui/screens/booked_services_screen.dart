@@ -45,7 +45,7 @@ class _BookedServicesScreenState extends State<BookedServicesScreen>
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Booked Services', style: TextStyles.font26PrimaryMedium),
+              Text('Booked Services', style: TextStyles.font18PrimaryMedium),
               IconButton(
                 onPressed: () {
                   bookedServicesController.getBookedServices();
@@ -68,7 +68,7 @@ class _BookedServicesScreenState extends State<BookedServicesScreen>
                     .map(
                       (tab) => Tab(
                         key: Key(tab),
-                        child: Text(tab, style: TextStyles.font26PrimaryMedium),
+                        child: Text(tab, style: TextStyles.font18PrimaryMedium),
                       ),
                     )
                     .toList(),
@@ -84,7 +84,7 @@ class _BookedServicesScreenState extends State<BookedServicesScreen>
                       bookedServicesController.isGetAllServices.value
                           ? TabBarView(
                             controller: tabController,
-                            
+
                             children: [
                               UpcomingServicesTable(
                                 bookedServicesController:

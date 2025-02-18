@@ -23,7 +23,7 @@ class CategoriesScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('Categories', style: TextStyles.font26PrimaryMedium),
+              Text('Categories', style: TextStyles.font18PrimaryMedium),
               IconButton(
                 onPressed: () {
                   getCategoriesController.getCategories();

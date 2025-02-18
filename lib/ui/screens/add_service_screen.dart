@@ -35,7 +35,7 @@ class AddServiceScreen extends StatelessWidget {
                   children: [
                     const CustomBackButton(),
                     const Spacer(),
-                    Text('Add Service', style: TextStyles.font26PrimaryMedium),
+                    Text('Add Service', style: TextStyles.font18PrimaryMedium),
                     const Spacer(),
                   ],
                 ),
@@ -173,7 +173,7 @@ class AddServiceScreen extends StatelessWidget {
                 if (addServiceController.isAdded.value)
                   Text(
                     'The Service added Successfully',
-                    style: TextStyles.font16PrimaryMedium,
+                    style: TextStyles.font14PrimaryMedium,
                   ),
               ],
             ),

@@ -14,7 +14,7 @@ DataCell bookersCell({
     onTap: () => showBookersDialog(bookers: bookers, context: context),
     child: Padding(
       padding: EdgeInsets.all(8),
-      child: Text('Bookers', style: TextStyles.font18BlueRegular),
+      child: Text('Bookers', style: TextStyles.font14BlueRegular),
     ),
   ),
 );
@@ -39,7 +39,7 @@ Future<dynamic> showBookersDialog({
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Bookers :', style: TextStyles.font26PrimaryMedium),
+                  Text('Bookers :', style: TextStyles.font18PrimaryMedium),
                   verticalSpace(5),
                   SizedBox(
                     height: 400,
@@ -58,7 +58,7 @@ Future<dynamic> showBookersDialog({
                                 children: [
                                   Text(
                                     bookers[index].userName,
-                                    style: TextStyles.font28WhiteBold,
+                                    style: TextStyles.font14PrimaryMedium,
                                   ),
                                   Row(
                                     mainAxisAlignment:
@@ -68,16 +68,13 @@ Future<dynamic> showBookersDialog({
                                         DateFormat.yMMMd().format(
                                           bookers[index].beingDate,
                                         ),
-                                        style: TextStyles.font28WhiteBold
-                                            .copyWith(
-                                              color: Colors.greenAccent,
-                                            ),
+                                        style: TextStyles.font14PrimaryMedium,
                                       ),
                                       Text(
                                         DateFormat.yMMMd().format(
                                           bookers[index].endDate,
                                         ),
-                                        style: TextStyles.font28WhiteBold
+                                        style: TextStyles.font14PrimaryMedium
                                             .copyWith(
                                               color: Colors.greenAccent,
                                             ),

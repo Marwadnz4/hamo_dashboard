@@ -33,7 +33,7 @@ class _UploadImageState extends State<UploadImage> {
         children: [
           Align(
             alignment: AlignmentDirectional.topStart,
-            child: Text(widget.labelText, style: TextStyles.font20LabelRegular),
+            child: Text(widget.labelText, style: TextStyles.font16LabelRegular),
           ),
           verticalSpace(13),
           InkWell(
@@ -71,7 +71,7 @@ class _UploadImageState extends State<UploadImage> {
                               horizontalSpace(20),
                               Text(
                                 'Upload Image',
-                                style: TextStyles.font26PrimaryMedium,
+                                style: TextStyles.font18PrimaryMedium,
                               ),
                             ],
                           ),
@@ -81,7 +81,7 @@ class _UploadImageState extends State<UploadImage> {
           ),
           if (!imageAvailable) verticalSpace(20),
           if (!imageAvailable)
-            Text('You should upload cover', style: TextStyles.font20RedRegular),
+            Text('You should upload cover', style: TextStyles.font16RedRegular),
         ],
       ),
     );

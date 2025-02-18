@@ -31,7 +31,7 @@ class AddBannerScreen extends StatelessWidget {
                   children: [
                     const CustomBackButton(),
                     const Spacer(),
-                    Text('Add Banner', style: TextStyles.font26PrimaryMedium),
+                    Text('Add Banner', style: TextStyles.font18PrimaryMedium),
                     const Spacer(),
                   ],
                 ),
@@ -79,7 +79,7 @@ class AddBannerScreen extends StatelessWidget {
                 if (addBannerController.isAdded.value)
                   Text(
                     'The Category added Successfully',
-                    style: TextStyles.font16PrimaryMedium,
+                    style: TextStyles.font14PrimaryMedium,
                   ),
               ],
             ),

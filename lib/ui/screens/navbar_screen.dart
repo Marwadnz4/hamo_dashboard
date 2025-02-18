@@ -63,7 +63,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                       'assets/images/white_logo.png',
                       height: 35,
                     ),
-                    title: Text("Hamo", style: TextStyles.font28WhiteBold),
+                    title: Text("Hamo", style: TextStyles.font16TextBold),
                   ),
                   verticalSpace(20),
                   Expanded(
@@ -111,7 +111,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                   verticalSpace(20),
                   ListTile(
                     leading: const Icon(Icons.logout, color: Colors.white),
-                    title: Text("Logout", style: TextStyles.font18WhiteMedium),
+                    title: Text("Logout", style: TextStyles.font14WhiteMedium),
                     onTap: () => Get.to(AppRoutes.loginScreen),
                   ),
                   verticalSpace(20),

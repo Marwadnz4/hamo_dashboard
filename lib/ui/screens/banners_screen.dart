@@ -24,7 +24,7 @@ class BannersScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('Banners', style: TextStyles.font26PrimaryMedium),
+              Text('Banners', style: TextStyles.font18PrimaryMedium),
               IconButton(
                 onPressed: () {
                   getBannersController.getBanners();

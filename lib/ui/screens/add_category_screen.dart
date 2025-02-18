@@ -31,7 +31,7 @@ class AddCategoryScreen extends StatelessWidget {
                   children: [
                     const CustomBackButton(),
                     const Spacer(),
-                    Text('Add Category', style: TextStyles.font26PrimaryMedium),
+                    Text('Add Category', style: TextStyles.font18PrimaryMedium),
                     const Spacer(),
                   ],
                 ),
@@ -102,7 +102,7 @@ class AddCategoryScreen extends StatelessWidget {
                 if (addCategoryController.isAdded.value)
                   Text(
                     'The Category added Successfully',
-                    style: TextStyles.font16PrimaryMedium,
+                    style: TextStyles.font14PrimaryMedium,
                   ),
               ],
             ),

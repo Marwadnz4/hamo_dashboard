@@ -2,46 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:hamo_dashboard/core/colors.dart';
 
 class TextStyles {
-  static TextStyle font20LabelRegular = TextStyle(
+  static TextStyle font16LabelRegular = TextStyle(
     color: ColorsManager.label,
     fontSize: 16,
     fontWeight: FontWeight.normal,
   );
 
-  static TextStyle font20HintRegular = TextStyle(
+  static TextStyle font14HintRegular = TextStyle(
     color: Colors.purpleAccent,
     fontSize: 14,
     fontWeight: FontWeight.normal,
   );
 
-  static TextStyle font20RedRegular = TextStyle(
+  static TextStyle font16RedRegular = TextStyle(
     color: Colors.red,
     fontSize: 16,
     fontWeight: FontWeight.normal,
-  );
-
-  static TextStyle font14PrefixRegular = TextStyle(
-    color: ColorsManager.label,
-    fontSize: 14,
-    fontWeight: FontWeight.normal,
-  );
-
-  static TextStyle font26PrimaryMedium = TextStyle(
-    color: ColorsManager.primary,
-    fontSize: 18,
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle font18WhiteMedium = TextStyle(
-    color: Colors.white,
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle font28WhiteBold = TextStyle(
-    color: Colors.white,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
   );
 
   static TextStyle font18PrimaryMedium = TextStyle(
@@ -52,11 +28,11 @@ class TextStyles {
 
   static TextStyle font14WhiteMedium = TextStyle(
     color: Colors.white,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle font16PrimaryMedium = TextStyle(
+  static TextStyle font14PrimaryMedium = TextStyle(
     color: ColorsManager.primary,
     fontSize: 14,
     fontWeight: FontWeight.w500,
@@ -74,84 +50,10 @@ class TextStyles {
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle font18BlueRegular = TextStyle(
+  static TextStyle font14BlueRegular = TextStyle(
     color: Colors.blue,
     fontSize: 14,
     fontWeight: FontWeight.normal,
-  );
-
-  static TextStyle font18BlueRegularUnderline = TextStyle(
-    color: Colors.blue,
-    fontSize: 18,
-    fontWeight: FontWeight.normal,
-    decoration: TextDecoration.underline,
-    decorationColor: Colors.blue,
-  );
-
-  static TextStyle font22PrimaryMedium = TextStyle(
-    color: ColorsManager.primary,
-    fontSize: 16,
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle font22RedMedium = TextStyle(
-    color: Colors.red,
-    fontSize: 2216,
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle font60WhiteBold = TextStyle(
-    color: Colors.white,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle font30DarkBlueBold = TextStyle(
-    color: ColorsManager.text,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle font30BlackBold = TextStyle(
-    color: Colors.black,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle font30MainDarkBlue = TextStyle(
-    color: ColorsManager.text,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle font20DarkBlue = TextStyle(
-    color: ColorsManager.text,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle font25LightYellow = TextStyle(
-    color: ColorsManager.text,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle font30WhiteRegular = TextStyle(
-    color: Colors.white,
-    fontSize: 16,
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle font30BoldDarkBlue = TextStyle(
-    color: ColorsManager.text,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle font20BoldDarkBlue = TextStyle(
-    color: ColorsManager.text,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
   );
 }
 

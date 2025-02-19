@@ -75,9 +75,6 @@ Future<dynamic> showBookersDialog({
                                           bookers[index].endDate,
                                         ),
                                         style: TextStyles.font14PrimaryMedium
-                                            .copyWith(
-                                              color: Colors.greenAccent,
-                                            ),
                                       ),
 
                                       InkWell(

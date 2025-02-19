@@ -18,11 +18,10 @@ class AddCategoryController extends GetxController {
   RxBool isAdded = false.obs;
 
   void uploadCover() async {
+    if (bytes != null) {
     isLoading.value = true;
     subFolderName =
         '${categoryNameController.text}${DateTime.now().microsecondsSinceEpoch}';
-
-    if (bytes != null) {
       String coverUrl = '';
       try {
         coverUrl = await _firebaseService.uploadImageToFirestorage(

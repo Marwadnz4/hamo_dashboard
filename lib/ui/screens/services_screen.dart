@@ -10,13 +10,12 @@ import 'package:hamo_dashboard/view_models/get_services_controller.dart';
 import 'package:hamo_dashboard/ui/widgets/tabels/services_table.dart';
 
 class ServicesScreen extends StatelessWidget {
-  const ServicesScreen({super.key});
-
+  ServicesScreen({super.key});
+  final GetServicesController getServicesController = Get.put(
+    GetServicesController(),
+  );
   @override
   Widget build(BuildContext context) {
-    final GetServicesController getServicesController = Get.put(
-      GetServicesController(),
-    );
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
       child: Column(

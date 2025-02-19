@@ -34,7 +34,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
     TabModel(
       icon: Icons.help,
       title: 'Services',
-      screen: const ServicesScreen(),
+      screen: ServicesScreen(),
     ),
     TabModel(
       icon: Icons.app_settings_alt_outlined,

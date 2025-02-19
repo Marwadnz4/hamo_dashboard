@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hamo_dashboard/core/colors.dart';
 import 'package:hamo_dashboard/core/constants.dart';
+import 'package:hamo_dashboard/ui/widgets/table_cells/bookers_cell.dart';
 import 'package:hamo_dashboard/ui/widgets/table_cells/header_cell.dart';
 import 'package:hamo_dashboard/ui/widgets/table_cells/image_cell.dart';
 import 'package:hamo_dashboard/ui/widgets/table_cells/normal_cell.dart';
@@ -48,6 +49,7 @@ class CanceledServicesTable extends StatelessWidget {
               imageCell(context: context, image: service.cover),
               normalCell(text: service.category.categoryName),
               normalCell(text: 'Canceled'),
+              bookersCell(bookers: service.bookers, context: context),
             ],
           );
         }),

@@ -20,7 +20,6 @@ class UploadMultiImagesBtn extends StatefulWidget {
 }
 
 class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
-  bool imageAvailable = false;
   final AddServiceController addServiceController = Get.find();
 
   @override
@@ -39,7 +38,6 @@ class _UploadMultiImagesBtnState extends State<UploadMultiImagesBtn> {
                 List<Uint8List>? bytesFromPicker =
                     await ImagePickerWeb.getMultiImagesAsBytes();
                 setState(() {
-                  imageAvailable = true;
                 });
                 if (bytesFromPicker != null) {
                   addServiceController.images.addAll(bytesFromPicker);

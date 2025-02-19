@@ -35,11 +35,10 @@ class AddServiceController extends GetxController {
   RxBool isAdded = false.obs;
 
   void uploadCover() async {
-    isLoading.value = true;
-    subFolderName =
-        '${serviceNameController.text}${DateTime.now().microsecondsSinceEpoch}';
-
     if (cover != null && images.isNotEmpty) {
+      isLoading.value = true;
+      subFolderName =
+          '${serviceNameController.text}${DateTime.now().microsecondsSinceEpoch}';
       String url = '';
       try {
         url = await _firebaseService.uploadImageToFirestorage(
@@ -80,7 +79,6 @@ class AddServiceController extends GetxController {
       }
     }
     if (imagesUrls.isNotEmpty) {
-      imagesUrls.add(coverUrl!);
       await addService();
     }
   }

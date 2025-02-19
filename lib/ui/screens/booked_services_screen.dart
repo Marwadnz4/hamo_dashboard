@@ -22,6 +22,10 @@ class _BookedServicesScreenState extends State<BookedServicesScreen>
   int initialIndex = 0;
   List<String> tabs = ['Upcoming', 'Completed', 'Cenceled'];
 
+final BookedServicesController bookedServicesController = Get.put(
+      BookedServicesController(),
+    );
+
   @override
   initState() {
     tabController = TabController(
@@ -34,9 +38,7 @@ class _BookedServicesScreenState extends State<BookedServicesScreen>
 
   @override
   Widget build(BuildContext context) {
-    final BookedServicesController bookedServicesController = Get.put(
-      BookedServicesController(),
-    );
+    
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
       child: Column(
@@ -84,7 +86,6 @@ class _BookedServicesScreenState extends State<BookedServicesScreen>
                       bookedServicesController.isGetAllServices.value
                           ? TabBarView(
                             controller: tabController,
-
                             children: [
                               UpcomingServicesTable(
                                 bookedServicesController:
